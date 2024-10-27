@@ -55,7 +55,7 @@ public class MovePlayerWithCharacterController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    /*private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
 
@@ -81,4 +81,5 @@ public class MovePlayerWithCharacterController : MonoBehaviour
         // Apply the push
         body.velocity = pushDir * pushPower;
     }
+    */
 }
