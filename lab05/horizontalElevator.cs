@@ -10,7 +10,6 @@ public class horizontalElevator : MonoBehaviour
     private float endPos;
     private bool isRunning = false;
     private bool movingForward = true;
-    private Transform oldParent;
 
     private void Start()
     {

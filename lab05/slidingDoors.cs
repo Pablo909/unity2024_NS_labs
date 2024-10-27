@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class slidingDoors : MonoBehaviour
 {
     public float doorSpeed = 1f;
     public float distance = 3.0f;
