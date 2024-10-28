@@ -8,9 +8,9 @@ public class MovePlayerWithCharacterController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     public float playerSpeed = 2.0f;
-    private float jumpHeight = 1.0f;
+    public float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
-    private float pushPower = 2.0f;
+    //private float pushPower = 2.0f;
     private void Start()
     {
         // zakładamy, że komponent CharacterController jest już podpięty pod obiekt
@@ -54,6 +54,16 @@ public class MovePlayerWithCharacterController : MonoBehaviour
         // okazuje się, że jest to zbyt wolne opadanie, więc zastosowano g * t-kwadrat
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    public void Launch(float launchForce)
+    {
+        playerVelocity.y += Mathf.Sqrt(launchForce * jumpHeight * -3.0f * gravityValue);
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.CompareTag("Obstacle"))
+            Debug.Log("Kontakt z przeszkodą");
     }
     /*private void OnControllerColliderHit(ControllerColliderHit hit)
     {

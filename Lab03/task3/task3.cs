@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class task : MonoBehaviour
+public class task3 : MonoBehaviour
 {
     public float speed=5.0f;
     private int forward = 1;
