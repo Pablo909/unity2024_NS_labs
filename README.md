@@ -1,2 +1,2 @@
-# unity2024_NS_labs
+# PAWEŁ BRONK 150788
 Projektowanie gier w środowisku UNITY, laboratoria
